@@ -29,9 +29,10 @@ simplefilter(action='ignore', category=FutureWarning)
 
 #X = np.array(df.drop(['class'], 1))
 #y = np.array(df['class'])
+
 data = pd.read_csv('data.csv');
 data.drop(data.columns[[-1, 0]], axis=1, inplace=True)
-features_mean= list(data.columns[1:11])
+features_mean= list(data.columns[1:31])
 X = data.loc[:,features_mean]
 y = data.loc[:, 'diagnosis']
 
